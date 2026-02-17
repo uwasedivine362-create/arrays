@@ -30,4 +30,6 @@ console.log(inventory);
 
 // EXERCISE3 :shallow copying of arrays and the reference trap
 //a
-const originalscore= []
+const originalscore= [90, 85 ,78]
+//b
+const
