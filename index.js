@@ -1,35 +1,111 @@
-//exercise1 :array initialization and property Access
-const productCategories =["book" ,"Electronics" ,"Clothing" ,"Home & kitchen", "toys & Game"];
-console.log(productCategories[0])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//EXERCISES 2:push ,pop ,shift ,unshift,shift, splice
-let inventory=
-inventory.splice(1, 1, 25,35);
-console.log(inventory);
-
-
-
-
-
-
-// EXERCISE3 :shallow copying of arrays and the reference trap
+// Exercise one: arrray initialization and property access
+const productCategories= ["Books", "Electronics", "Clothing", "Home & Kitchen", "Toys & Games"];
 //a
-const originalscore= [90, 85 ,78]
+console.log(productCategories[0]);
 //b
-const
+console.log(productCategories[productCategories.length - 1]);
+//c
+console.log(productCategories.length);
+//d
+productCategories[1]= "Pens";
+//e
+console.log(productCategories);
+
+
+//Exercise two: Push, Pop, Shift, Unshift, Splice
+let invetory=[10,20,30];
+
+//a
+invetory.push(40);
+console.log(invetory);
+
+//b
+invetory.pop(40);
+console.log(invetory);
+
+//c
+invetory.unshift(0);
+console.log(invetory);
+
+//d
+invetory.shift(0);
+console.log(invetory);
+
+//e
+invetory.splice(1,1,25,35);
+console.log(invetory);
+
+//Exercise three: Shallow Copying of Arrays and the reference trap
+
+
+//a
+const originalScores=[90,85,78];
+//b
+const referenceCopy= originalScores; // reference copy, not a new array
+console.log(referenceCopy);
+//c 
+referenceCopy[0]= 100;
+console.log("Original Scores:", originalScores);
+console.log("Reference Copy:", referenceCopy);
+
+//d
+const spreadCopy= [...originalScores]; // creates a new array with the same elements
+//e
+spreadCopy[0]= 50;
+console.log("Original Scores:", originalScores);
+console.log("Spread Copy:", spreadCopy);
+
+//SECTION 3: Searching and Checking
+//Exercise 4: Finding Elements by Index and Value
+
+const studentNames= ["Alice", "Bob", "Charlie", "Alice", "David"];
+
+//a 
+console.log(studentNames.indexOf("Alice"));
+//b
+console.log(studentNames.lastIndexOf("Alice"));
+//c
+console.log(studentNames.includes("charles"));
+
+//d
+//SECTION 3: Searching and Checking
+//Exercise 4: Finding Elements by Index and Value
+
+const studentNames= ["Alice", "Bob", "Charlie", "Alice", "David"];
+
+//a 
+//the indexof, lastindex = if the first condition is successful it print out true then the condition stops
+console.log(studentNames.indexOf("Alice"));
+//b
+console.log(studentNames.lastIndexOf("Alice"));
+//c
+console.log(studentNames.includes("Charlie"));
+//d
+console.log(studentNames.includes("Eve"));
+
+
+//EXERCISE 5:Advanced searching with find and findIndex
+
+const product =[
+   
+     {id:1,Name:"laptop",price:999},
+       {id:1,Name:"smartphone",price:499},
+        {id:1,Name:"Tablet",price:299},
+         {id:1,Name:"headphone",price:199},
+];
+//a
+let foundProducts=product.find(product => product.id===2);
+console.log(foundProducts);
+//b
+
+let foundIndex =productCategories.foundindex(p)
+
+
+
+
+
+
+
+
+
+
